@@ -25,6 +25,7 @@ class Pdf extends Module
         $config = $properties->toArray();
      
         $this->mpdf = new \Mpdf\Mpdf($config);
+        $this->setServiceName('pdf');  
         $this->setBootable(false);
     }
 
