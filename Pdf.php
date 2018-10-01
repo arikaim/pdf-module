@@ -9,13 +9,10 @@
 */
 namespace Arikaim\Modules\Pdf;
 
-use Intervention\Image\ImageManager;
-
 use Arikaim\Core\Utils\Utils;
 use Arikaim\Core\Module\Module;
 use Arikaim\Core\Module\ModulesManager;
 use Arikaim\Core\Form\Properties;
-
 use Arikaim\Modules\Pdf\Facade\Pdf as PdfFacade;
 
 class Pdf extends Module
