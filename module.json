@@ -1,0 +1,15 @@
+{
+    "title": "PDF",
+    "description": "Create PDF files.",
+    "version": "1.0",
+    "requires": [
+        "mpdf/mpdf"
+    ],
+    "help": {
+        "url": "https://mpdf.github.io/"
+    },
+    "facade": {
+        "class": "Arikaim\\Modules\\Pdf\\Facade\\Pdf",
+        "alias": "Pdf"
+    }
+}
