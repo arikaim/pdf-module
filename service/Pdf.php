@@ -9,7 +9,7 @@
 */
 namespace Arikaim\Modules\Pdf\Service;
 
-use \Mpdf\Mpdf;
+use Mpdf\Mpdf;
 
 use Arikaim\Core\Service\Service;
 use Arikaim\Core\Service\ServiceInterface;
@@ -48,10 +48,10 @@ class Pdf extends Service implements ServiceInterface
      */
     public function writeHTML(string $html, array $options = [])
     {
-        return $this
-            ->create($options)
-            ->WriteHTML($html)
-            ->Output();
+        $mpdf = $this->create($options);
+        $mpdf->WriteHTML($html);
+           
+        return $mpdf->Output();
     }
 
     /**
@@ -68,9 +68,9 @@ class Pdf extends Service implements ServiceInterface
             ->get('page')
             ->renderHtmlComponent($componentName,$params,'en','html');      
             
-        return $this
-            ->create($options)
-            ->WriteHTML($component->getHtmlCode())
-            ->Output();
+        $mpdf = $this->create($options);
+        $mpdf->WriteHTML($component->getHtmlCode());
+        
+        return $mpdf->Output();
     } 
 }

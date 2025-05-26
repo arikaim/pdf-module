@@ -9,8 +9,6 @@
 */
 namespace Arikaim\Modules\Pdf;
 
-use Mpdf\Mpdf;
-
 use Arikaim\Core\Extension\Module;
 
 class Pdf extends Module
@@ -23,15 +21,5 @@ class Pdf extends Module
     public function install()
     {
         $this->registerService('Pdf');
-    }
-
-    /**
-     * Get instance
-     *
-     * @return Mpdf
-     */
-    public function getMpdf()
-    {
-        return $this->mpdf;
     }
 }
