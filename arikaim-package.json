@@ -1,18 +1,15 @@
 {
     "title": "PDF",
+    "name": "pdf", 
+    "type": "package",  
     "package-type": "module",
     "description": "Create PDF files.",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "repository": "https://github.com/arikaim/pdf-module.git",
     "require": {
         "composer": [
             "mpdf/mpdf"
         ]
     },   
-    "help": "https://mpdf.github.io/",
-    "facade": {
-        "class": "Arikaim\\Modules\\Pdf\\Facade\\Pdf",
-        "alias": "Pdf"
-    },
-    "disabled": true
+    "help": "https://mpdf.github.io/"
 }
